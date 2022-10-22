@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Assignment</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: rgb(212, 208, 208);
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(44, 40, 40);
+        }
+
+        .navbar {
+
+            padding: 1em 0;
+            background-color: rgb(27, 25, 25);
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            margin: auto;
+            box-shadow: 0 6px 15px 2px rgb(239 36 36 / 69%);
+        }
+
+        .q {
+
+            text-decoration: none;
+            margin: 0 2.6em;
+            padding-top: 1em;
+        }
+
+        .q:hover {
+            color: rgb(249, 59, 59);
+        }
+
+        .question {
+
+            padding: 60px 90px;
+        }
+
+        #question1 {
+
+            padding-right: 30%;
+        }
+
+        #question2 {
+
+            padding-left: 30%;
+            background-color: rgb(39 34 34);
+        }
+
+        #question3 {
+
+            padding-right: 30%;
+        }
+
+        #question4 {
+
+            padding-left: 30%;
+            background-color: rgb(39 34 34);
+
+        }
+
+        #question5 {
+
+            padding-right: 30%;
+        }
+
+        h2 {
+
+            color: rgb(255, 57, 57);
+            padding: 10px 0;
+            font-size: 34px;
+        }
+
+        h3 {
+
+            padding: 15px 0;
+            font-size: 22px;
+        }
+
+        .output,
+        .efficiency,
+        .memory {
+
+            margin-left: 23px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="full">
+
+        <div class="navbar">
+
+            <a class="q" href="#question1">
+                Question 1
+            </a>
+
+            <a class="q" href="#question2">
+                Question 2
+            </a>
+
+            <a class="q" href="#question3">
+                Question 3
+            </a>
+
+            <a class="q" href="#question4">
+                Question 4
+            </a>
+
+            <a class="q" href="#question5">
+                Question 5
+            </a>
+        </div>
+
+        <div class="body">
+
+            <div id="question1" class="question">
+
+                <h2>Task-1</h2>
+
+                <div class="output">
+
+                    <h3>Output</h3>
+
+                    The code takes a string, which is a propositional logic in Infix form, and outputs a string, which
+                    is in form of postfix form of the given input.
+                </div>
+                <div class="efficiency">
+
+                    <h3>Efficiency-</h3>
+
+                    The time complexity of the algorithm is O(N), where N is the length of the input string. The Boolean
+                    functions used in the code to check symbols and bracket run in O(1) complexity, and the task1
+                    function runs in O(N) complexity, as it contains some for and while loops which occur one after the
+                    other.
+                </div>
+                <div class="memory">
+
+                    <h3>Memory-</h3>
+                    The space complexity of our algorithm is O(N). The function task1 duplicates the string 3 times, and
+                    also uses a stack. This makes our overall space usage 4N, where N is the size of string.
+                </div>
+            </div>
+            <div id="question2" class="question">
+
+                <h2>Task-2</h2>
+
+                <div class="output">
+
+                    <h3>Output</h3>
+                    The code horizontally displays the parse tree in form of a string in the terminal. The input string
+                    is prefix propositional logic expression. This is converted to a parse tree and then displayed in
+                    form of a string.
+
+                </div>
+                <div class="efficiency">
+
+                    <h3>Efficiency-</h3>
+                    The time complexity of the algorithm is O(N). The buildParseTree function traverses the string of
+                    size N once, and so does the displayTree function. The displayTree function traverses the tree once
+                    recursively, in order to print it. All the other functions run in O(1) complexity.
+
+                </div>
+                <div class="memory">
+
+                    <h3>Memory-</h3>
+                    The space complexity of our algorithm is O(N). This is because, N nodes of tree are stored in
+                    memory.
+
+                </div>
+            </div>
+            <div id="question3" class="question">
+
+                <h2>Task-3</h2>
+
+                <div class="output">
+
+                    <h3>Output</h3>
+                    The code returns infix form of the input parse tree, in string format. The code takes input tree in
+                    form of a string, converts it to a binary tree. After this, it traverses the tree recursively to
+                    return the infix form of the parse tree.
+
+                </div>
+                <div class="efficiency">
+
+                    <h3>Efficiency-</h3>
+                    The time complexity of the algorithm is O(N). The buildParseTree function traverses the string of
+                    size N once, and so does the displayTree function. The inOrderTraversal function traverses the tree
+                    recursively once. This takes complexity of O(N), where N is the number of nodes.
+
+                </div>
+                <div class="memory">
+
+                    <h3>Memory-</h3>
+                    The space complexity of our algorithm is O(N). This is because, N characters of the input string are
+                    converted to nodes of the tree. These N nodes are stored in the memory.
+
+                </div>
+            </div>
+            <div id="question4" class="question">
+
+                <h2>Task-4</h2>
+
+                <div class="output">
+
+                    <h3>Output</h3>
+                    The code prints the height of the input parse tree in form of integer. It takes tree as an input,
+                    and then calculates the height using heightRecursive function, and returns the height in integer
+                    format.
+
+                </div>
+                <div class="efficiency">
+
+                    <h3>Efficiency-</h3>
+                    The time complexity of the algorithm is O(N). The heightRecursive function recursively traverses all
+                    the nodes (N) in order to calculate the height of the tree. Also, the code traverses the input
+                    string of size N to generate a tree.
+
+                </div>
+                <div class="memory">
+
+                    <h3>Memory-</h3>
+                    The space complexity of our algorithm is O(N). This is because, N nodes are stored in form of a
+                    tree.
+
+                </div>
+            </div>
+            <div id="question5" class="question">
+
+                <h2>Task-5</h2>
+
+                <div class="output">
+
+                    <h3>Output</h3>
+                    The code returns the Boolean value of input propositional logic formula. First, we input the
+                    propositional logic formula in form of string, then the code converts it to parse tree form. Then,
+                    it calculates the output using the parse tree.
+
+                </div>
+                <div class="efficiency">
+
+                    <h3>Efficiency-</h3>
+                    The time complexity of the algorithm is O(N). In the input string with N characters, the code
+                    converts it to parse tree with N nodes. Also, getTruthValue function traverses the N nodes in order
+                    to calculate the truth value of the propositional formula.
+
+                </div>
+                <div class="memory">
+
+                    <h3>Memory-</h3>
+                    The space complexity of our algorithm is O(N). This is because, N nodes are stored in form of a
+                    tree. Also, we use map to store the truth value of each atom, and a set to store the checked atom.
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
